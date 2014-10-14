@@ -6,5 +6,7 @@
 echo 'Hello world from Cloud9!';
 $names = "Atlas, Perseus, Herkules";
 $name_list = explode(", ", $names);
-var_dump($IP);
+foreach ($name_list as $name){
+    var_dump($name);
+}
 ?>

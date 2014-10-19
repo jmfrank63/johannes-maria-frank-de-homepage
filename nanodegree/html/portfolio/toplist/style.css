@@ -1,0 +1,34 @@
+* {
+  /*outline: 1px solid red !important;*/
+}
+* {
+  /*outline: 1px solid red !important;*/
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.title {
+    background-color: #33bebe;
+    margin-bottom: 50px;
+    font-family: Arial;
+    color: white;
+    height: 100px;
+    padding-top: 60px;
+}
+.app {
+  display: -webkit-flex;
+  display: flex;
+}
+.description {
+  font-family: "Open Sans Condensed";
+  color: #7C8B88;
+  font-size: 24px;
+  max-width: 705px;
+  margin-left: 40px;
+}
+.screenshot {
+  max-width: 460px; 
+}

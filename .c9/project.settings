@@ -27,7 +27,7 @@
     },
     "ace": {
         "@newLineMode": "unix",
-        "@tabSize": "4",
+        "@tabSize": 2,
         "@useSoftTabs": "true",
         "@guessTabSize": "true"
     },

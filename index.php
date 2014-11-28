@@ -5,5 +5,6 @@
 //$home = file_get_contents("home.html");
 //echo $home;
 print_r(PDO::getAvailableDrivers());
+echo $_SERVER["HTTP_HOST"];
 phpinfo();
 ?>

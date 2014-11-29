@@ -30,7 +30,6 @@ if (strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io') !== false) {
 $provider = function($dbhost, $dbname, $dbuser, $dbpassword) {
   try {
     $dbstring = "mysql:host={$dbhost};dbname={$dbname}";
-    echo $dbstring;
     $connection = new PDO($dbstring, $dbuser, $dbpassword );
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

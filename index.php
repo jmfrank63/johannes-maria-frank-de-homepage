@@ -5,7 +5,7 @@
 phpinfo();
 require("php/provider.php");
 require("php/classes/dataFactory.php");
-
+echo $host, $dbname, $dbuser, $dbpassword;
 $factory = new DataFactory($provider);
 $document = $factory->create('Document', $host, $dbname, $dbuser, $dbpassword);
 $html = $factory->create('Html', $host, $dbname, $dbuser, $dbpassword);

@@ -28,6 +28,7 @@ if (!strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io')) {
 // create a callable returning the connection
 $provider = function($host, $dbname, $dbuser, $dbpassword) {
   try {
+    echo $host, $dbname, $dbuser, $dbpassword
     $connection = new PDO('mysql:host='.$host.';dbname='.$dbname, $dbuser, $dbpassword );
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

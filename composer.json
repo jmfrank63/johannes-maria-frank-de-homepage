@@ -1,6 +1,11 @@
 {
   "require": {
     "phpunit/phpunit": "4.3.*"
+  },
+  
+  "autoload": {
+    "classmap": ["php/classes/"]
+    
   }
 }
 

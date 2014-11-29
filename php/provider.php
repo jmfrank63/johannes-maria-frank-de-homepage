@@ -2,11 +2,7 @@
 // creates a callback function to get access to the database dependent on its
 // environment
 
-// set database name
-
-
 // check for environment we are running on
-
 if (strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io') !== false) {
   $dbname = 'c9';
   $dbhost = getenv('IP');
@@ -39,7 +35,4 @@ $provider = function($dbhost, $dbname, $dbuser, $dbpassword) {
   }
   return $connection;
 };
-
-
-
 ?>

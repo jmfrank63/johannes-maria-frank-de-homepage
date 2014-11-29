@@ -12,10 +12,10 @@ if (!strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io')) {
   $dbuser = getenv('C9_USER');
   $dbpassword = '';
 } elseif (!strpos($_SERVER['HTTP_HOST'],'johannes-maria-frank.de')) {
-    $dbname = getenv('RDS_DB_NAME');
-    $host = getenv('RDS_HOST_NAME');
-    $dbuser = getenv('RDS_USERNAME');
-    $dbpassword = getenv('RDS_PASSWORD');
+    $dbname = $_SERVER['RDS_DBNAME'];
+    $host = $_SERVER['RDS_HOSTNAME'];
+    $dbuser = $_SERVER['RDS_USERNAME'];
+    $dbpassword = $_SERVER['RDS_PASSWORD'];
 } elseif (!strpos($_SERVER['HTTP_HOST'],'localhost')) {
     $dbname = 'wbsproject';
     $host = 'localhost';

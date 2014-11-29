@@ -6,7 +6,7 @@
 
 
 // check for environment we are running on
-echo $_SERVER['HTTP_HOST'];
+
 if (strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io') !== false) {
   $dbname = 'c9';
   $dbhost = getenv('IP');

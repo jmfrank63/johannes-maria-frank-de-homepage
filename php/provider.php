@@ -12,7 +12,7 @@ if (!strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io')) {
   $dbuser = getenv('C9_USER');
   $dbpassword = '';
 } elseif (!strpos($_SERVER['HTTP_HOST'],'johannes-maria-frank.de')) {
-    $dbname = $_SERVER['RDS_DBNAME'];
+    $dbname = $_SERVER['RDS_DB_NAME'];
     $host = $_SERVER['RDS_HOSTNAME'];
     $dbuser = $_SERVER['RDS_USERNAME'];
     $dbpassword = $_SERVER['RDS_PASSWORD'];

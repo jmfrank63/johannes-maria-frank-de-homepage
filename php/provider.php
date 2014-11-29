@@ -7,17 +7,17 @@
 
 // check for environment we are running on
 echo $_SERVER['HTTP_HOST'];
-if (!strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io')) {
+if (strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io') !== false) {
   $dbname = 'c9';
   $dbhost = getenv('IP');
   $dbuser = getenv('C9_USER');
   $dbpassword = '';
-} elseif (!strpos($_SERVER['HTTP_HOST'],'johannes-maria-frank.de')) {
+} elseif (strpos($_SERVER['HTTP_HOST'],'johannes-maria-frank.de') !== false) {
     $dbname = $_SERVER['RDS_DB_NAME'];
     $dbhost = $_SERVER['RDS_HOSTNAME'];
     $dbuser = $_SERVER['RDS_USERNAME'];
     $dbpassword = $_SERVER['RDS_PASSWORD'];
-} elseif (!strpos($_SERVER['HTTP_HOST'],'localdbhost')) {
+} elseif (strpos($_SERVER['HTTP_HOST'],'localdbhost') !== false) {
     $dbname = 'wbsproject';
     $dbhost = 'localdbhost';
     $dbuser = 'root';

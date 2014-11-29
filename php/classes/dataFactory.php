@@ -10,9 +10,9 @@ class DataFactory {
   }
 
   // creates a new database connection instance
-  public function create( $name, $host, $dbname, $dbuser, $dbpassword) {
+  public function create( $name, $dbhost, $dbname, $dbuser, $dbpassword) {
     if ( $this->connection === null ) {
-      $this->connection = call_user_func_array( $this->provider, array($host, $dbname, $dbuser, $dbpassword) );
+      $this->connection = call_user_func_array( $this->provider, array($dbhost, $dbname, $dbuser, $dbpassword) );
     }
     return new $name( $this->connection );
   }

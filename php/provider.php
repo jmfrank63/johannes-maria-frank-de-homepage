@@ -8,17 +8,17 @@
 // check for environment we are running on
 if (!strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io')) {
   $dbname = 'c9';
-  $host = getenv('IP');
+  $dbhost = getenv('IP');
   $dbuser = getenv('C9_USER');
   $dbpassword = '';
 } elseif (!strpos($_SERVER['HTTP_HOST'],'johannes-maria-frank.de')) {
     $dbname = $_SERVER['RDS_DB_NAME'];
-    $host = $_SERVER['RDS_HOSTNAME'];
+    $dbhost = $_SERVER['RDS_HOSTNAME'];
     $dbuser = $_SERVER['RDS_USERNAME'];
     $dbpassword = $_SERVER['RDS_PASSWORD'];
-} elseif (!strpos($_SERVER['HTTP_HOST'],'localhost')) {
+} elseif (!strpos($_SERVER['HTTP_HOST'],'localdbhost')) {
     $dbname = 'wbsproject';
-    $host = 'localhost';
+    $dbhost = 'localdbhost';
     $dbuser = 'root';
     $dbpassword = '';
 } else {
@@ -26,10 +26,11 @@ if (!strpos($_SERVER['HTTP_HOST'],'wbsproject-jmfrank63.c9.io')) {
 }
 
 // create a callable returning the connection
-$provider = function($host, $dbname, $dbuser, $dbpassword) {
+$provider = function($dbhost, $dbname, $dbuser, $dbpassword) {
   try {
-    echo $host, $dbname, $dbuser, $dbpassword;
-    $connection = new PDO('mysql:host='.$host.';dbname='.$dbname, $dbuser, $dbpassword );
+    $dbstring = "mysql:host={$dbhost};dbname={$dbname}";
+    echo $dbstring;
+    $connection = new PDO($dbstring, $dbuser, $dbpassword );
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
   } catch(PDOException $exp) {

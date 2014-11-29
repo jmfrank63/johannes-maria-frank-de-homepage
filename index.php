@@ -5,10 +5,10 @@
 phpinfo();
 require("php/provider.php");
 require("php/classes/dataFactory.php");
-echo $host, $dbname, $dbuser, $dbpassword;
+echo $dbhost, $dbname, $dbuser, $dbpassword;
 $factory = new DataFactory($provider);
-$document = $factory->create('Document', $host, $dbname, $dbuser, $dbpassword);
-$html = $factory->create('Html', $host, $dbname, $dbuser, $dbpassword);
+$document = $factory->create('Document', $dbhost, $dbname, $dbuser, $dbpassword);
+$html = $factory->create('Html', $dbhost, $dbname, $dbuser, $dbpassword);
 var_dump($document, $html);
 $home = file_get_contents("home.html");
 echo $home;

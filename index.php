@@ -10,7 +10,7 @@ $factory = new DataFactory($provider);
 $document = $factory->create('Document', $dbhost, $dbname, $dbuser, $dbpassword);
 $html = $factory->create('Html', $dbhost, $dbname, $dbuser, $dbpassword);
 
-$home = file_get_contents("home.html");
+$home = file_get_contents("static/home.html");
 echo $home;
-phpinfo();
+//phpinfo();
 ?>

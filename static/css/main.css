@@ -1,0 +1,64 @@
+/* General */
+body {
+    font-family: "Lucida Grande", sans-serif;
+    color: #666;
+}
+
+h2 {
+    color: #5987b9;
+}
+
+/* Header */
+.super-title {
+    padding-top: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #666;
+}
+
+/* Figure */
+.img-mug {
+    padding: 0;
+}
+
+.image-button {
+    border: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Figure Caption */
+.feature-box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.feature-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.feature-list {
+    font-size: 16px;
+    line-height: 200%;
+}
+
+/* Article */
+.sub-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 200%;
+}

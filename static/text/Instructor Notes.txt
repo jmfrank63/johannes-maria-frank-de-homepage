@@ -1,0 +1,18 @@
+Instructor Notes
+
+Bootstrap can be found at the following path: css/bootstrap.min.css. Please use the exact path. Tests will fail if you will use a different path for bootstrap files.
+
+Mug image can be found at images/mug.png
+
+Font family is "Lucida Grande", sans-serif
+
+Font color for the main title and text is #666666, for subtitle - #F07C17
+
+The border around the box under the image should be solid 1px and its color should be#CCCCCC.
+
+You will have to find the font sizes, line spacing, margins/padding on your own.
+
+HTML/CSS Style Guide: http://goo.gl/0EVzNy
+
+Do not try to load non-local files (like fonts, from another server) in our page. This can cause the "dubious: no message left" - also there is another cause of that error we just discovered: if your line-height is a large value like 200%.
+
